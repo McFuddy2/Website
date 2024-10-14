@@ -51,3 +51,6 @@ footer {
     background-color: #222;
     color: white;
 }
+.spaced {
+    margin-bottom: 1rem; /* Adjust this value for more or less space */
+}
