@@ -10,82 +10,114 @@
 <body>
     <div id="header"></div> 
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>Hi, I'm Glenn Burgess, a backend developer currently living in Utah. I’m passionate about creating solutions that empower others. I have lived in Nevada, California, Idaho, and Colorado, however I am happily located now in Utah with my lovely wife and our two dogs.</p>
-        <img src="Images/tree.jpg" alt="Glenn Burgess" class="profile-pic">
+    <section id="about" class="card about-container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hi, I'm Glenn Burgess, a backend developer currently living in Utah. After years of connecting people to solutions, I decided it was time to become the one crafting those solutions myself. Although I'm still relatively new to the field, my passion lies in Python, where I excel at problem-solving and turning ideas into reality.</p>
+            
+            <p>Currently, I'm working on this very webpage—my first foray into front-end development! It's been a journey of trial and error, a lot of Google-fu, and sheer determination to bring my vision to life.</p>
+    
+            <p>When I'm not coding, you'll find me embracing my hobbies:</p>
+            <ul>
+                <li><strong>Dungeons & Dragons</strong>: I love the limitless possibilities of problem-solving and creativity.</li>
+                <li><strong>Disc Golf</strong>: I enjoy practicing and anticipating challenges before they arise, as well as learning how to recover quickly when things don’t go as planned.</li>
+                <li><strong>3D Printing</strong>: There’s something magical about transforming an idea into a tangible creation through patience and hard work.</li>
+                <li><strong>Board Games</strong>: From Food Chain Magnate to Ark Nova, I thrive on learning new strategies and rules to turn the tables in my favor.</li>
+                <li><strong>Boating</strong>: Nothing beats the joy of gliding across the water, soaking up the sun, and embracing the freedom it brings.</li>
+            </ul>
+    
+            <p>I also enjoy video games, especially heavily modded Minecraft and cooperative games I can play with my wife, Jessica. Our adventures together have taken us around the world, making her my best friend and partner in crime.</p>
+    
+            <p>My favorite anime characters inspire my approach to life: Luffy teaches me to never give up on my dreams, Goku reminds me to always strive for improvement, and Naruto shows me the power of teamwork in creating a better world. The Marvel Cinematic Universe drives home the idea that anyone can be a hero; it's all about the choices we make.</p>
+    
+            <p>As I continue to learn and grow in my backend development journey, I aim to one day become a senior developer who can coach newcomers. I’ve already attended tech meetups and joined a Discord server filled with developers working on a D&D product, eager to connect and collaborate.</p>
+    
+            <p>I’m hands-on in my learning—much like this website! I dive in headfirst, using resources and my determination to tackle each challenge. My guiding principle is simple: "Life is better when you are laughing."</p>
+        </div>
+        <img src="images/tree.jpg" alt="Profile Pic" class="profile-pic">
     </section>
 
     <section id="professional-background" class="card">
         <h2>Professional Background</h2>
         <p>After years of connecting people to solutions, I’m excited to create solutions myself. I have a background in sales and management, where I honed my problem-solving skills and adaptability. Transitioning into backend development has been an exciting journey!</p>
+        <p>I recently served as a Data Annotation Specialist at Tesla, recognized as "Data Labeler of the Week" for my commitment to quality and efficiency. Before that, I spent a decade with Vector Marketing, where I earned the "Annual Incentive Trip" three times and ranked as a top 10 branch manager. I had the privilege of helping run the #1 new business office in the nation in the fall of 2017.</p>
+        <p>In addition to my sales experience, I've developed a range of technical skills. I'm most confident in Python and Git, and I've worked on projects including a Pokédex game using the PokeAPI and an Asteroids game with Python and Pygame. I also built a system for analyzing large datasets during my time earning a Python Fundamentals certificate from Cornell, and I created a Spell Scraper using JavaScript to parse HTML into usable JSON.</p>
+        <p>With 13 certificates from Boot.dev and a Python certificate from Cornell, I'm eager to explore data management, AI, and machine learning. My goal is to become a Senior Developer, mentoring new developers along the way. I pride myself on clear communication, hard work, and problem-solving abilities, always striving for improvement!</p>
     </section>
+    
 
     <section id="technical-skills" class="card">
         <h2>Technical Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Go</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-            <!-- Add more skills as needed -->
-        </ul>
+        <div class="skills-container">
+            <ul>
+                <li>Python</li>
+                <li>Go</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Git</li>
+                <li>Markdown</li>
+                <li>Google Drive</li>
+                <li>Click Up</li>
+                <li>Pygame</li>
+                <li>JSON</li>
+                <li>and more...</li>
+            </ul>
+            <div class="certificates">
+                <img id="certImage" src="images/certs/certificateGlennBurgess.jpg" alt="Certificate" class="cert-pic">
+            </div>
+        </div>
     </section>
 
-    <section id="hobbies" class="card">
-        <h2>Hobbies and Interests</h2>
-        <ul>
-            <li>DND - Spend time with friends problem solving and being heroes of the land</li>
-            <li>Disc Golf - Spend time with friends, while yelling at the trees</li>
-            <li>3D Printing - Have an idea, and in hours hold the prototype</li>
-            <li>Board Games - Spend time with friends in a battle of planning and forethought</li>
-            <li>Racquetball - Spend time with friends releasing your out of shape</li>
-            <li>Boating - Spend time with nature. Nothing matters when it's Boat'O'Clock</li>
-            <li>Wakeboarding - Stand on the water and try not to fall</li>
-            <li>Swimming - Like flying... but wet</li>
-            <li>Video Games - Escape our reality to save another</li>
-        </ul>
-    </section>
-
-    <section id="fandoms" class="card">
-        <h2>Fandoms</h2>
-        <ul>
-            <li>One Piece - “No matter how hard or how impossible it is, never lose sight of your goal.”</li>
-            <li>MCU - "What is grief, if not love persevering?"</li>
-            <li>Harry Potter - "Of course it is happening inside your head, Harry. But why on earth should that mean that it is not real?"</li>
-            <li>Dragon Ball Z - "We can't just give up because things aren't the way we want them to be."</li>
-            <li>My Hero Academia - "A goal with no plan is called a delusion. You need a plan in order to achieve your goal."</li>
-            <li>Naruto - "For those who don't believe in themselves, hard work is worthless!"</li>
-        </ul>
-    </section>
-
-    <section id="personal-projects" class="card">
-        <h2>Personal Projects</h2>
-        <p>Check out my projects on <a href="https://github.com/McFuddy2">GitHub</a>!</p>
-    </section>
-
-    <section id="fun-facts" class="card">
-        <h2>Fun Facts</h2>
-        <ul>
-            <li>I’ve held a tiger while in Mexico.</li>
-            <li>I can do a 180 on a wakeboard.</li>
-            <li>I’ve placed in the top 3 in two different Disc Golf tournaments.</li>
-        </ul>
+    <section id="hobbies-fandoms" class="card">
+        <div class="hobbies-container">
+            <h2>Hobbies and Interests</h2>
+            <ul>
+                <li><strong>DND:</strong> Spend time with friends problem-solving and being heroes of the land</li>
+                <li><strong>Disc Golf:</strong> Spend time with friends, while yelling at the trees</li>
+                <li><strong>3D Printing:</strong> Have an idea, and in hours hold the prototype</li>
+                <li><strong>Board Games:</strong> Spend time with friends in a battle of planning and forethought</li>
+                <li><strong>Racquetball:</strong> Spend time with friends releasing your out of shape</li>
+                <li><strong>Boating:</strong> Spend time with nature. Nothing matters when it's Boat'O'Clock</li>
+                <li><strong>Wakeboarding:</strong> Stand on the water and try not to fall</li>
+                <li><strong>Swimming:</strong> Like flying... but wet</li>
+                <li><strong>Video Games:</strong> Escape our reality to save another</li>
+            </ul>
+        </div>
+        <div class="fandoms-container">
+            <h2>Fandoms</h2>
+            <ul>
+                <li><strong>One Piece:</strong> “No matter how hard or how impossible it is, never lose sight of your goal.”</li>
+                <li><strong>MCU:</strong> "What is grief, if not love persevering?"</li>
+                <li><strong>Harry Potter:</strong> "Of course it is happening inside your head, Harry. But why on earth should that mean that it is not real?"</li>
+                <li><strong>Dragon Ball Z:</strong> "We can't just give up because things aren't the way we want them to be."</li>
+                <li><strong>My Hero Academia:</strong> "A goal with no plan is called a delusion. You need a plan in order to achieve your goal."</li>
+                <li><strong>Naruto:</strong> "For those who don't believe in themselves, hard work is worthless!"</li>
+            </ul>
+        </div>
     </section>
 
     <section id="personal-life" class="card">
-        <h2>Personal Life</h2>
-        <p>What could be better than playing games with my wife?</p>
+        <h2>Pictures</h2>
 
         <div class="carousel-container">
-            <div class="carousel">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-images">
                 <div class="carousel-slide active"><img src="images/tiger!.jpg" alt="Picture 1"></div>
-                <div class="carousel-slide"><img src="images/dead wars with duke.jpg" alt="Picture 2"></div>
-                <div class="carousel-slide"><img src="images/couple at fanx dr who.jpg" alt="Picture 3"></div>
+                <div class="carousel-slide"><img src="images/deadwars.jpg" alt="Picture 2"></div>
+                <div class="carousel-slide"><img src="images/couplefanx.jpg" alt="Picture 3"></div>
+                <div class="carousel-slide"><img src="images/boating.jpg" alt="Picture 4"></div>
+                <div class="carousel-slide"><img src="images/couplejungle.jpg" alt="Picture 5"></div>
+                <div class="carousel-slide"><img src="images/couplepineapple.jpg" alt="Picture 6"></div>
+                <div class="carousel-slide"><img src="images/discgolf.jpg" alt="Picture 7"></div>
+                <div class="carousel-slide"><img src="images/escaperoom.jpg" alt="Picture 8"></div>
+                <div class="carousel-slide"><img src="images/foodchain.jpg" alt="Picture 9"></div>
+                <div class="carousel-slide"><img src="images/ropescourse.jpg" alt="Picture 10"></div>
+                <div class="carousel-slide"><img src="images/tomsshop.jpg" alt="Picture 11"></div>
+                <div class="carousel-slide"><img src="images/tree.jpg" alt="Picture 12"></div>
+
                 <!-- Add more images as needed -->
             </div>
-            <button class="carousel-button prev">⟨</button>
-            <button class="carousel-button next">⟩</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
 
     </section>
@@ -95,3 +127,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
