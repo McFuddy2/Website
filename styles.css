@@ -88,3 +88,72 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* About Me section styling */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Professional picture styling */
+.profile-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px; /* Adjust this for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.5s;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 8px; /* Optional: round the image corners */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Add active class for visible slide */
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide {
+    opacity: 0;
+    transition: opacity 1s;
+}
