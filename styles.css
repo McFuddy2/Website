@@ -54,3 +54,12 @@ footer {
 .spaced {
     margin-bottom: 1rem; /* Adjust this value for more or less space */
 }
+
+.card {
+    background: white; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin: 20px; /* Margin between cards */
+    padding: 20px; /* Padding inside cards */
+}
+
