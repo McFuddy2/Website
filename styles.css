@@ -116,7 +116,7 @@ footer {
     width: 400px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* General styling for the parent section */
@@ -242,4 +242,50 @@ li {
 
 .prev:hover, .next:hover {
     background-color: #555;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Stack the text and image vertically in the "About Me" section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 250px; /* Make the profile picture smaller on mobile */
+    }
+
+    /* Display only 1 image at a time in the carousel on mobile */
+    .carousel-container {
+        height: 300px;
+    }
+
+    .carousel-images {
+        width: 100%; /* Only the width of 1 image */
+    }
+
+    .carousel-item {
+        width: 100%; /* Full width for one image */
+    }
+
+    /* Certificates section: move images below text and reduce size */
+    .skills-container {
+        flex-direction: column; /* Stack text and certificates vertically */
+        align-items: center;
+    }
+
+    .certificates {
+        width: 90%; /* Make the certificates smaller on mobile */
+        margin: 20px 0; /* Add spacing above and below */
+    }
+
+    .cert-pic {
+        width: 100%; /* Adjust the certificate images to fit the smaller container */
+    }
 }
