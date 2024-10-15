@@ -16,5 +16,5 @@ function loadComponent(file, elementId) {
 }
 
 // Adjust the paths according to your directory structure
-loadComponent('/Website/header.html', 'header');
-loadComponent('/Website/footer.html', 'footer');
+loadComponent('header.html', 'header');
+loadComponent('footer.html', 'footer');
