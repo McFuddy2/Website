@@ -81,5 +81,17 @@ function changeCertificate() {
     certImage.src = certificates[currentIndex2]; // Update image source
 }
 
-// Change certificate every 2 seconds
-setInterval(changeCertificate, 2000); // 2000 milliseconds = 2 seconds
+// Change certificate every 1 second
+setInterval(changeCertificate, 1000); // 2000 milliseconds = 2 seconds
+
+// Toggle the visibility of the Notable Concepts section
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButtons = document.querySelectorAll(".toggle-concepts");
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const concepts = this.nextElementSibling;
+            concepts.style.display = concepts.style.display === "none" ? "block" : "none";
+            this.textContent = concepts.style.display === "none" ? "View Notable Concepts" : "Hide Notable Concepts";
+        });
+    });
+});

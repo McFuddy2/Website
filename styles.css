@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #007BFF, #FF0000); /* Gradient from blue to red */
 }
 
 header {
@@ -22,24 +22,58 @@ nav ul {
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
-        display: flex; /* Use flexbox for better alignment */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 0; /* Vertical spacing */
+        margin: 10px 0; 
     }
 
     .about-container {
-        flex-direction: column; /* Stack the profile picture and text */
-        align-items: center; /* Center the items */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .profile-pic {
-        width: 200px; /* Reduce the size on mobile */
+        width: 200px; 
+    }
+
+    .carousel-container {
+        height: 300px;
+    }
+
+    .carousel-images {
+        width: 100%; 
+    }
+
+    .carousel-item {
+        width: 100%; 
+    }
+
+    .skills-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .certificates {
+        width: 90%; 
+        margin: 20px 0; 
+    }
+
+    .cert-pic {
+        width: 100%; 
+    }
+
+    /* Position GIF under text on mobile */
+    .gif-container {
+        order: 2; /* Push it below the text */
+        width: 100%; /* Ensuring it takes full width */
+        display: flex; /* Center it within the container */
+        justify-content: center;
     }
 }
 
@@ -78,26 +112,49 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* Add this CSS rule to styles.css */
+.footer-content {
+    display: flex;                     /* Use flexbox for layout */
+    align-items: center;               /* Center items vertically */
+    justify-content: space-between;    /* Space items out */
+    margin-bottom: 20px;               /* Add margin for spacing */
+}
 
+.quote {
+    margin: 0;                        /* Remove default margin */
+    color: white;                    /* Change color to white (optional) */
+    flex: 1;                         /* Allow the quote to take up remaining space */
+}
+
+.tenor-gif-embed {
+    margin-left: 20px;                /* Space between quote and GIF */
+    max-width: 200px;                 /* Limit the width of the GIF */
+}
 .spaced {
     margin-bottom: 1rem;
 }
 
+/* Card Styles */
 .card {
     background: rgb(228, 228, 238);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 20px;
-    width: 100%; /* Full width */
+    width: 94%; 
+    transition: transform 0.3s; /* Added transition for hover effects */
 }
 
-.card h2 {
+.card h2, .project-card h2 {
     margin-bottom: 1rem;
 }
 
-.card p {
+.card p, .project-card p {
     margin-bottom: 1.5rem;
+}
+
+.project-card:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
 }
 
 /* About Me Section */
@@ -244,48 +301,110 @@ li {
     background-color: #555;
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    /* Stack the text and image vertically in the "About Me" section */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
+/* Project Section Styling */
+#projects { 
+    padding: 2em;
+}
+#projects h2 {
+    color: white;             /* Change text color to white */
+    font-size: 3em;          /* Make the text bigger (adjust as needed) */
+    text-align: center;      /* Center the text */
+    margin: 20px 0;         /* Add some margin for spacing */
+}
 
-    .about-text {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+.project-card {
+    display: flex; /* Enable flex layout */
+    align-items: flex-start; /* Align items at the top */
+    background: rgb(228, 228, 238);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Margin for spacing */
+    padding: 20px; /* Padding for aesthetics */
+    width: 97%; /* Ensure full width */
+}
 
-    .profile-pic {
-        width: 250px; /* Make the profile picture smaller on mobile */
-    }
+.project-content {
+    display: flex; /* Keep the internal layout flexible */
+    width: 100%; /* Make it take the full width */
+}
 
-    /* Display only 1 image at a time in the carousel on mobile */
-    .carousel-container {
-        height: 300px;
-    }
+/* Left column (project details) */
+.project-details {
+    flex: 1; /* Allow the details section to fill the remaining space */
+}
 
-    .carousel-images {
-        width: 100%; /* Only the width of 1 image */
-    }
+/* Right column (GIF) */
+.project-gif {
+    flex: 0 0 50%; /* Set the GIF to take up half the width of the card */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Space between the GIF and text */
+    max-height: 100%; /* Prevent the GIF from exceeding the height of the text */
+    display: flex; /* Use flex layout to center the GIF vertically */
+    align-items: center; /* Center the GIF vertically */
+}
 
-    .carousel-item {
-        width: 100%; /* Full width for one image */
-    }
+.project-gif img {
+    width: 100%; /* Ensure the image takes the full width of the GIF container */
+    height: auto; /* Maintain aspect ratio of the GIF */
+    max-height: 100%; /* Ensure the GIF doesn't exceed its container's height */
+}
+/* Project name styling */
+.project-name {
+    font-size: 1.8em; /* Larger font size for the project name */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the logo vertically with the text */
+    margin-bottom: 10px; /* Space below the project name */
+}
 
-    /* Certificates section: move images below text and reduce size */
-    .skills-container {
-        flex-direction: column; /* Stack text and certificates vertically */
-        align-items: center;
-    }
+.project-logo {
+    width: 40px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Space between the name and logo */
+}
 
-    .certificates {
-        width: 90%; /* Make the certificates smaller on mobile */
-        margin: 20px 0; /* Add spacing above and below */
-    }
+.github-button {
+    display: inline-block; /* Button styling */
+    padding: 10px 20px; /* Padding */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Space around the button */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
 
-    .cert-pic {
-        width: 100%; /* Adjust the certificate images to fit the smaller container */
-    }
+.github-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.technologies,
+.notable-concepts,
+.description {
+    margin: 10px 0; /* Consistent spacing for all paragraphs */
+}
+
+.notable-concepts {
+    font-weight: normal; /* Normal weight for notable concepts text */
+}
+
+.check-it-out-button {
+    display: inline-block;
+    margin-left: 10px; /* Add space between buttons */
+    padding: 10px 20px;
+    background-color: #069a0b; /* Change to desired color */
+    color: white;
+    text-align: center; /* Center text */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Space around the button */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s;
+}
+
+.check-it-out-button:hover {
+    background-color: #044606; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
