@@ -7,17 +7,81 @@ body {
     background: linear-gradient(to right, #007BFF, #FF0000); /* Gradient from blue to red */
 }
 
+/* Header Styling */ 
 header {
+    width: 100%;
     background-color: #050425;
     color: white;
     padding: 1rem;
-    text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Style for the top part of the header (name and role) */
+.header-top {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+    width: 100%; /* Ensures it takes full width */
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    margin: 0 auto; /* Center the header content */
 }
+
+/* Styling the name and role in the header */
+.name {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role {
+    font-size: 0.9em;
+    font-weight: lighter;
+    margin-left: 70px; /* Space between name and role */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    position: relative; /* Change to relative for initial position */
+    z-index: 1; /* Ensure it stays on top */
+    background-color: rgba(5, 4, 37); /* Semi-transparent background color */
+    padding: 10px 0; /* Padding around the buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: adds a subtle shadow */
+}
+
+/* Sticky effect: Only the navbar remains at the top on scroll */
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    width: 90%; /* Keep the width at 90% */
+    left: 50%; /* Position from the left */
+    transform: translateX(-50%); /* Move it left by half its width */
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: rgba(5, 4, 37); /* Optional: background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: adds a subtle shadow */
+}
+
+/* Menu item styling */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    margin: 0 5px; /* Space between menu items */
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Hides the header-top when navbar becomes sticky */
+.header-hidden {
+    display: none; /* Hide when sticky */
+}
+
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -112,24 +176,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
-/* Add this CSS rule to styles.css */
-.footer-content {
-    display: flex;                     /* Use flexbox for layout */
-    align-items: center;               /* Center items vertically */
-    justify-content: space-between;    /* Space items out */
-    margin-bottom: 20px;               /* Add margin for spacing */
-}
 
-.quote {
-    margin: 0;                        /* Remove default margin */
-    color: white;                    /* Change color to white (optional) */
-    flex: 1;                         /* Allow the quote to take up remaining space */
-}
-
-.tenor-gif-embed {
-    margin-left: 20px;                /* Space between quote and GIF */
-    max-width: 200px;                 /* Limit the width of the GIF */
-}
 .spaced {
     margin-bottom: 1rem;
 }
@@ -407,4 +454,62 @@ li {
 .check-it-out-button:hover {
     background-color: #044606; /* Darker shade on hover */
     transform: translateY(-2px); /* Lift effect on hover */
+}
+
+
+
+
+/* Style for the contact section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the contact card container */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgb(228, 228, 238);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Style each contact item in the card */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+/* Style for icons */
+.contact-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Styling the h1 to be white, larger, and centered */
+#contact h1 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Link style */
+.contact-card a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 1.6em; /* Increase font size for links */
+}
+
+.contact-card a:hover {
+    color: #004080;
 }

@@ -95,3 +95,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// JavaScript for sticky navbar and hiding header on scroll
+window.onscroll = function() {
+    var header = document.querySelector("header");
+    var stickyNavbar = document.querySelector(".navbar");
+    var sticky = stickyNavbar.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+        stickyNavbar.classList.add("sticky-navbar");
+        header.querySelector(".header-top").classList.add("header-hidden"); // Hide header
+    } else {
+        stickyNavbar.classList.remove("sticky-navbar");
+        header.querySelector(".header-top").classList.remove("header-hidden"); // Show header
+    }
+};
